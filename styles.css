@@ -1,0 +1,35 @@
+body {
+    --background-body: #01161E;
+}
+
+div {
+    border-radius: 25px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1,h2 {
+    color: #228CDB;
+}
+
+button {
+    background-color: #228CDB;
+}
+
+a {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+:root {
+    line-height: 150%;
+    text-align: center;
+    --code: #228CDB;
+    --links: #228CDB;
+}
+
+img {
+    padding: 20px;
+}
