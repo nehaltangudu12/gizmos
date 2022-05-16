@@ -13,6 +13,10 @@
         <button id="nice" onclick="founction()">IQ Calculator (Joke)</button>
         
         <h1 id="desc"></h1>
+        
+        <button href="https://en.wikipedia.org/wiki/Special:Random">Random Wikipedia Article</button>
+        
+        <button id="pog" onclick="changebackground()">Change Background Color</button>
 
         <script>
         function founction() { 
@@ -25,7 +29,11 @@
             } else if (iq < 150) {
                 document.getElementById("desc").innerHTML = "Congrats, you have an IQ of " + iq + "! You must be pretty smart!" ;
             }
-            //document.body.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            
+        }
+            
+        function changebackground() { 
+            document.body.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
         }
         </script>
     </body>
