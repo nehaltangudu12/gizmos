@@ -8,6 +8,11 @@ div {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.editortitle {
+    width: fit-content;
+    margin: auto;
+    padding: 15px;
+}
 h1,h2 {
     color: #228CDB;
 }

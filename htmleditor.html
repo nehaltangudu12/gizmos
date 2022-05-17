@@ -5,11 +5,17 @@
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Editor</title>
+        <style id="styla">
+            
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
         
-        <h2>Basic HTML Editor</h2>
+        <h1 style="font-family: 'JetBrains Mono', monospace;" class="editortitle">Basic HTML/CSS Editor</h1>
 
         <script>
 
@@ -17,11 +23,22 @@
             document.getElementById("pepega").innerHTML = document.getElementById("funtext").value;
             
         }
-        </script>
-        <div></div>
 
-        <textarea type="text" id="funtext" onkeyup="displaytext()" style="display: block; margin-left: auto; margin-right: auto;"></textarea> 
+        function displaycss() {
+            document.getElementById("styla").innerHTML = document.getElementById("funcss").value;
+            
+        }
+
+        </script>
+
+
+        <h2 style="font-family: 'JetBrains Mono', monospace;">HTML</h2>
+        <textarea type="text" id="funtext" onkeyup="displaytext()" style="display: block; margin-left: auto; margin-right: auto;font-family: 'JetBrains Mono', monospace;"></textarea> 
+       
+        <h2 style="font-family: 'JetBrains Mono', monospace;">CSS</h2>
+        <textarea type="text" id="funcss" onkeyup="displaycss()" style="display: block; margin-left: auto; margin-right: auto;font-family: 'JetBrains Mono', monospace;"></textarea> 
         
-        <h3 id="pepega"></h3>
+        <h2 style="font-family: 'JetBrains Mono', monospace;">Output:</h2>
+        <div id="pepega"></div>
     </body>
 </html>
