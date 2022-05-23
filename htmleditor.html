@@ -6,39 +6,55 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Editor</title>
         <style id="styla">
-            
+            iframe {
+                bottom: 0;
+                position: relative;
+                width: 100%;
+                height: 35em;
+            }
         </style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <script type="text/javascript">
+            function compile() {
+                var html = document.getElementById("funhtml");
+                var css = document.getElementById("funcss");
+                var js = document.getElementById("funjs");
+                var code = document.getElementById("code").contentWindow.document;
+
+                document.body.onkeyup = function() {
+                    code.open();
+                    code.writeln(
+                    html.value +
+                        "<style>" +
+                        css.value +
+                        "</style>" +
+                        "<script>" +
+                        js.value +
+                        "<\/script>"
+                    );
+                    code.close();
+                };
+            }
+            compile();
+        </script> 
     </head>
 
     <body>
         
         <h1 style="font-family: 'JetBrains Mono', monospace;" class="editortitle">Basic HTML/CSS Editor</h1>
 
-        <script>
-
-        function displaytext() {
-            document.getElementById("pepega").innerHTML = document.getElementById("funtext").value;
-            
-        }
-
-        function displaycss() {
-            document.getElementById("styla").innerHTML = document.getElementById("funcss").value;
-            
-        }
-
-        </script>
-
-
         <h2 style="font-family: 'JetBrains Mono', monospace;">HTML</h2>
-        <textarea type="text" id="funtext" onkeyup="displaytext()" style="display: block; margin-left: auto; margin-right: auto;font-family: 'JetBrains Mono', monospace;"></textarea> 
+        <textarea type="text" id="funhtml" style="display: block; margin-left: auto; margin-right: auto;font-family: 'JetBrains Mono', monospace;"></textarea>
        
         <h2 style="font-family: 'JetBrains Mono', monospace;">CSS</h2>
-        <textarea type="text" id="funcss" onkeyup="displaycss()" style="display: block; margin-left: auto; margin-right: auto;font-family: 'JetBrains Mono', monospace;"></textarea> 
+        <textarea type="text" id="funcss" style="display: block; margin-left: auto; margin-right: auto;font-family: 'JetBrains Mono', monospace;"></textarea>
+        
+        <h2 style="font-family: 'JetBrains Mono', monospace;">JS</h2>
+        <textarea type="text" id="funjs" style="display: block; margin-left: auto; margin-right: auto;font-family: 'JetBrains Mono', monospace;"></textarea>
         
         <h2 style="font-family: 'JetBrains Mono', monospace;">Output:</h2>
-        <div id="pepega"></div>
+        <iframe id="pepega"></iframe>
     </body>
 </html>
