@@ -4,7 +4,6 @@ body {
 
 div {
     border-radius: 25px;
-    padding: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -37,4 +36,14 @@ a {
 
 img {
     padding: 20px;
+}
+
+#pog{
+    width: fit-content;
+    margin: auto;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 60px;
 }
