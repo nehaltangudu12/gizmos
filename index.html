@@ -8,42 +8,42 @@
     </head>
 
     <body>
-
-        <button id="nice" onclick="founction()">IQ Calculator (Joke)</button>
-        
-        <h1 id="desc"></h1>
-        <br>
-        <br>
-        <br>
-        <a href="https://en.wikipedia.org/wiki/Special:Random">Random Wikipedia Article</a>
-        <br>
-        
-       
-        
-
         <script>
-        function founction() { 
-            var iq =  Math.round(Math.random() * 150);
-            document.getElementById("nice").innerHTML = "Your IQ is : " + iq;
-            if (iq < 50) {
-                document.getElementById("desc").innerHTML = "Wow, only " + iq + "? Unfortunate." ;
-            } else if (iq < 100) {
-                document.getElementById("desc").innerHTML = "Painfully average " + iq + "." ;
-            } else if (iq < 150) {
-                document.getElementById("desc").innerHTML = "Congrats, you have an IQ of " + iq + "! You must be pretty smart!" ;
+            function founction() { 
+                var iq =  Math.round(Math.random() * 150);
+                document.getElementById("nice").innerHTML = "Your IQ is : " + iq;
+                if (iq < 50) {
+                    document.getElementById("desc").innerHTML = "Wow, only " + iq + "? Unfortunate." ;
+                } else if (iq < 100) {
+                    document.getElementById("desc").innerHTML = "Painfully average " + iq + "." ;
+                } else if (iq < 150) {
+                    document.getElementById("desc").innerHTML = "Congrats, you have an IQ of " + iq + "! You must be pretty smart!" ;
+                }
+                
             }
-            
-        }
-            
-        function changebackground() { 
-            document.body.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-        }
-
+                
+            function changebackground() { 
+                document.body.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            }
+    
         </script>
-        <br>
+        
+        <h1 style="font-family: monospace; font-size: 80px;">Gizmos</h1>
 
-        <a href="htmleditor.html">Online HTML Editor</a>
-
+        <table>
+         <tr>
+            <td> <button id="nice" onclick="founction()">IQ Calculator (Joke)</button>
+                <h1 id="desc"></h1>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Special:Random">Random Wikipedia Article</a></td>
+        </tr>
+        <tr>
+            <td><a href="htmleditor.html">Online HTML Editor</a></td>
+        </tr>
+        </table>
+        
         <div id="bkground" style="bottom: 0; position: fixed; right: 0; left: 0;">        
             <button id="pog" onclick="changebackground()">Change Background Color</button>
         </div>
