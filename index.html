@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
         <title>Gizmos</title>
     </head>
 
@@ -28,7 +29,7 @@
     
         </script>
         
-        <h1 style="font-family: monospace; font-size: 80px;">Gizmos</h1>
+        <h1 style="font-family: 'JetBrains Mono', monospace; font-size: 60px;">Gizmos</h1>
 
         <table>
          <tr>
@@ -37,14 +38,19 @@
             </td>
         </tr>
         <tr>
-            <td><a href="https://en.wikipedia.org/wiki/Special:Random">Random Wikipedia Article</a></td>
+            <td>
+                <p style="font-family: 'Courier New', Courier, monospace; color: #228CDB;"><b>
+                    Random Wikipedia Article</b></p>
+                <iframe src="https://en.wikipedia.org/wiki/Special:Random;" 
+                style="width: 650px; height: 500px;"></iframe> 
+            </td>
         </tr>
         <tr>
             <td><a href="htmleditor.html">Online HTML Editor</a></td>
         </tr>
         </table>
         
-        <div id="bkground" style="bottom: 0; position: fixed; right: 0; left: 0;">        
+        <div id="bkground" style="bottom: 0; position: fixed; left: 4%;">        
             <button id="pog" onclick="changebackground()">Change Background Color</button>
         </div>
     </body>
